@@ -71,3 +71,7 @@
 ---
 # 6. Have a conversation with the reviewee
 
+---
+# Pull Request template
+
+---
