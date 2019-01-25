@@ -12,15 +12,14 @@
 - Sharing skill 🔧
 - Making a good product through discussion 🗯
 
+[.build-lists: true]
 ---
 # What is Code Review NOT For?
 - Finding out a programming bug 🕵️
 - Code formatting, linting ♻️
 - Fixing the specification 👷
 
----
-# What information is required for Code Review?
-
+[.build-lists: true]
 ---
 # What information is required for Code Review?
 - Goal
@@ -29,6 +28,7 @@
 - Changes made
 - Verification steps
 
+[.build-lists: true]
 ---
 # The story of code review
 
