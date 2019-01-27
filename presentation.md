@@ -69,21 +69,39 @@
 ^Just joking. But please note it is really easy to check whether the code *works* or not in the code review on the contrary to the real journey.
 ^I have many experiences that the code does not compile when Proguard is enabled, or the app crashes instantly due to timezone issue.
 ^So making sure the code at least runs or not is important before reviewing each changes in detail.
-^In addition to that, seeing the app actually working gives you some inspirations.  What if the network is offline?  What if the activity is destroyed?
-^Before you start your trip, it is worth doing a kind of smoke test.
+^In addition to that, seeing the actual running app gives you some inspirations.  What if the network is offline?  What if the activity is destroyed?
+^Just like real test, it is worth doing smoke test on code review.
 
 ---
 # 4. Look into every changes one by one
 
 [image: a man is walking and looking around]
+^Now is the time to look into changes in detail.
+^I am not describing the techniques about how to review each changes.
+^That part will be done later in this talk.
+^One thing to note is that the rule of thumb is to think and feel as the reviewee does.
+^As a proverb says, walk in his moccasins.
+^You already know the background, the goal and the strategy of the journey.
+^Then you are more likely to be able to understand why the change is made and why he or she takes this option not others.
+^This is the very heart of the code review.  Thorough this process, you could share knowledge and skill with the reviewee efficiently.
 
 ---
 # 5. Look back the change from the goal
 
 [image: a man on the mountain looks back the route]
+^Now you have done the code review.  Your job is done?
+^Wait a moment.  Do not jump the gun.
+^It is the time to look back your review.  Looking back your journey from the goal, then it might look different.
+^In the begining of the code review, a change sometimes seem odd.  You do not get why the reviewee does that change.
+^But putting it in the entire change, the change might make sense.
+^So if you find one of your comments are off the point, take back it.
 
 ---
 # 6. Have a conversation with the reviewee
+^OK.  Now your review is done.
+^Finally, give your feed back to the reviewee and have a conversation if necessary.
+^After walking through the route with his or her mocassins, it is rather easy to have a communication with the reviewee.
+^You know his or her pain, why, how and what he or she has made.  It helps you much to have an efficient conversation with the reviewee.
 
 ---
 # Pull Request template
