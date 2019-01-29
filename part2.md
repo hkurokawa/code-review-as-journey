@@ -4,37 +4,39 @@ Read the description
 
 - Understand backgroud of the problem and check how it is solved
 
-^ Check if the content is written as template.
+^ First of all let's check if the content is written as template.
 If you don't know something, don't hesitate to ask reviewee it.
 It's usual for people to forget anything to do.
 
 ---
 
-# 挙動確認
+# Operational check
 
-コードをローカルに落としてきて、ビルドする
-git worktreeを使うと、自分の作業を邪魔しないので便利
+Checkout the branch and build on your local.
+`git worktree` command is very useful.
 
 ```
 git worktree add ~/code-review/branch_name branch_name
 android-studio.sh ~/code-review/branch_name
 ```
 
-^ コードを読んでから不具合を発見してしまうよりは、不具合を直してからコードを読む方が手戻りが少ない
-gradleキャッシュが競合してビルドできない事も起きたりするので、別のディレクトリで確認するのがおすすめです
-DataBindin関連の変更などがあるとなおさら危険です。
+^ To avoid wasting your time, we usually do operational check before code review.
+Sometime gradle builds fail after checking out the branch which has changes about databinding, build.gradle and so forth, 
+using different directory makes build stable.
 
 ---
 
 # UI
 
-- マリアルデザインに則っているか(リップル、アニメーション)
-- styleや色、マージンなど
-- アニメーションのスケール変更(見た目?)
-- レイアウト境界の表示(見た目?)
-- iOS UI
+- Is along the guidelines of MD or your team?
+- Is using animation properly?
+- Is not like iOS UI?
 
-^ UIについても確認するべきです。ガイドラインからかけ離れたデザインになっていないか、細部が壊れていないかも確認します。
+
+Developer options are useful to check details.
+
+^ Unfortunately designers are not always familiar with Material Design. 
+So we need to check if it's on the android way.
 
 ---
 
