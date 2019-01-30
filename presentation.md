@@ -2,16 +2,6 @@
 
 [.footer: Hiroshi Kurokawa, Takafumi Nanao, mixi, Inc., DroidKaigi 2019]
 
---- 
-
-# What is Code Review For?
-
----
-## Code Review is for collaboration
-- Sharing knowledge 📖
-- Sharing skill 🔧
-- Making a good product through discussion 🗯
-
 ^Hi, good morning everyone.
 ^I am Hiroshi Kurokawa and (Nanao-san says his name). Today I and Nanao-san are talking about code review.
 ^Is everyone doing code review?  Raise your hand if you are doing code review as a part of your daily job.
@@ -21,24 +11,48 @@
 ^But I noticed some reviewers give considerate good feedback on my code and we could have fruitful dicussion about how to make our product better while I do not with other reviewers.
 ^I think there are some techniques about how to do a good code review.  And with regarding to Android app development, there are some tips and tricks to do efficient code review as well.
 ^So that is why I am here.
+--- 
 
-[.build-lists: true]
----
-# What is Code Review NOT For?
-- Finding out a programming bug 🕵️
-- Code formatting, linting ♻️
-- Fixing the specification 👷
+# What is Code Review For?
 
 ^Before talking about code review.  I would like to give a brief definition about code review.  Especially about for what it is done.
 ^Code review has many aspects and when people think about code review, the image they have in their mind is sometimes rather different.
 ^Someone might think it is for finding out a bug while others might think it is for discussing specifications.
-^To clarify what the code review is, I list up what the code review is not for.
+---
+# What is Code Review NOT For?
+- Finding out a programming bug 🕵️
+- Code formatting, linting ♻️
+- Discussing the specification 👷
+
+^To clarify what the code review is, I list up what the code review is NOT for so that you could get a clear image about code review.
 ^First, it is not for finding out a bug.
 ^Of course, sometimes a reviewer could find a potential bug and that is just good.
 ^But it is not the goal of code review.  It is mostly done through testing.
 ^Second, there are many formatting rules or lint warnings.  And it is also good to point out such things - it will anyway make the code better.
 ^But I think it is basically done by formatter or linter.
-^Finally, 
+^Finally, the code review is not for discussing the specification of a product.
+^It is always useful to talk about the specification.  And even when the specification is fixed before a developer starts coding, everything might not work as planned.
+^In such case, we have to have a discussion around the spcification and fix it if necessary.
+^Here what I just want to say is if you feel the spcification has a problem, involve the product manager and discuss it offline not on GitHub.
+
+[.build-lists: true]
+---
+## Code Review is for collaboration
+- Sharing knowledge 📖
+- Sharing skill 🔧
+- Making a good product through discussion 🗯
+
+^So, what code review is for?
+^In my opinion, it is for sharing knowledge, sharing skills and making a good product.  In short, it is for collaboration.
+^The first part of the process is to embrace how the reviewee thinks and solve a problem.
+^At first, you have no idea why the reviewee does this thing or that thing.
+^But through the code review, you will have a kind of heart-to-heart exchanges between the reviewee and finally get his or her idea.
+^And then you could give a feedback or a suggestion on how to improve their code.  It is the latter part of code review.
+^The reason why I use the word "journey" in this presentation title is this process seems to me a journey.
+^Not a physical one but rather a psychological one.
+^You walk down the way with the reviewee, have a conversation seeing scenary.
+^Sometimes you find out a better route or you might be told what you would overlook without the fellowship.
+^At last you get to the goal.
 
 [.build-lists: true]
 ---
@@ -48,6 +62,11 @@
 - Strategy
 - Changes made
 - Verification steps
+
+^To do this journey, you need some information.
+^First of all, the goal is most important.  What does the change try to solve?  For what we have to change our code?
+^And, next, there must be a background behind the change.  Sometimes its a disucssion in a hall or a chat on Slack.
+^Anyway, there is a context for this change and doing code review without knowing that background is like going through a tunnel without a light.
 
 [.build-lists: true]
 ---
