@@ -1,58 +1,58 @@
-# Understanding background
+# Understanding the background
 
 Read the description
 
-- Understand backgroud of the problem and check how it is solved
+- Understand the background of the problem and check how it is solved
 
-^ First of all let's check if the content is written as template.
-If you don't know something, don't hesitate to ask reviewee it.
-It's usual for people to forget anything to do.
+^ First of all let's check if the content was written using the template.
+If there is something you don't understand, don't hesitate to ask reviewee it.
+It's usual for people to forget writing some details.
 
 ---
 
 # Operational check
 
-Checkout the branch and build on your local.
-`git worktree` command is very useful.
+Checkout the branch and build it locally.
+The `git worktree` command is very useful.
 
 ```
 git worktree add ~/code-review/branch_name branch_name
 android-studio.sh ~/code-review/branch_name
 ```
 
-^ To avoid wasting your time, we usually do operational check before code review.
-Sometime gradle builds fail after checking out the branch which has changes about databinding, build.gradle and so forth,
-using different directory makes build stable.
+^ To avoid wasting our time, we usually do operational check before code review.
+Sometimes gradle builds fail after checking out a branch which has changes about databinding, build.gradle and so forth,
+using a different directory helps make the build stable.
 
 ---
 
 # UI
 
-- Is along the guidelines of MD or your team?
-- Is using animation properly?
-- Is not like iOS UI?
+- Is it along the guidelines of Material Design or your team's?
+- Is it using animation properly?
+- Is it not like iOS UI?
 
 tips to check
 
 - Developer options
   - Show layout bounds
-  - Change nimation scale
+  - Change animation scale
 
 ^ Unfortunately designers are not always familiar with Material Design or Android friendly UI.
-So we need to check if it's on the Android way.
+So we need to check if it's done the Android way.
 
 ---
 
 # UI behind UI
 
-- Is handling errors?
-- Is taking care of no data?
-- Is using progress indicator properly?
+- Is it handling errors?
+- Does it work even with no data?
+- Is it using the progress indicator properly?
 
 tips to check
 
 - add debug code directly
-- `delay`
+- use `delay`
 - Airplane mode
 
 ^ Only showing data is not everything.
@@ -61,10 +61,10 @@ We should handle various errors or empty state.
 ---
 # Lifecycle
 
-- Does it work on returning from home screen?
-- Is supporting screen rotation?
-- Does it work on killing process?
-- Does it work on mashing buttons?
+- Does it work after returning from the home screen?
+- Does it support screen rotation?
+- Does it work after the process was killed?
+- Can it handle buttons being tapped very fast?
 
 ^ Imagine what you don't want users to do. Just do it.
 
@@ -172,7 +172,7 @@ since it's often hard to add tests later,
 we had better write tests as ealy as possible.
 
 ---
-# 変更していないところも見る
+# Unchanged code
 
 - 使われなくなったメソッドやフィールドの確認
 - EventBusのように pubsub系に影響がないか
