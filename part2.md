@@ -107,63 +107,69 @@ We should share common values in our team.
 
 ^
 In our team, elegance of architecture doesn't matter.
-Releases of Android platform or libraries whih we use are very frequent.
+Releases of Android platform or libraries which we use are very frequent.
 We need to update them as early as possible.
 So we focus on how is it easy to change, fix or add new features.
 
 ---
 # Layout
 
-- 気になるところは実際に変更を加えてみる
-- 不要そうな属性やネストを消したときの挙動を確認する
+- unnecessary stuffs
+- unnecessary nest
+
+^
+If you have any concern, change code and check how it works.
 
 ---
-# Githubの機能を活用する
+# code format
 
-- ignore whitespaces
-- コードサジェスト機能
-
----
-# フォーマット
-
-- コーディングルールを設定で共有する
-  - フォーマッタ
-  - Lintの設定
+- share your coding rules
+  - formatting
+  - rules of lint
 
 ```
 # .gitignore
 !.idea/codeStyles
 !.idea/inspectionProfiles
 ```
-^ コードスタイルやインスペクトルールはリポジトリに含める事ができます。
-なるべく人間が気にしなくても良いように工夫しましょう。
+
+^
+Settings aboutg coding style or code inspection can be shared in repository.
+Save your time with automation.
 
 ---
-# ライブラリの使い方
+# 3rd party libraries
 
-ソースを読む
+- Is trusty?
+- Is maintained well?
+- Is there better alternatives?
 
-- 不自然な記述や気になるところがあれば、他の実現方法が無いか調べる
-- 知らないライブラリであれば、実際にソースを読んでみる
-
-^ 別の手段が見つかるかもしれない
-
----
-# リークしていないか
-
-- Acitivityの強参照など
-- 心配なコードを見つけたらプロファイラを見ながら動かしてみる
-
-^ 画面を進んだり戻ったりしてみて、メモリの使用が増えていたら、リークしているかもしれない
+^
+If you don't know the new library,
+read the document and source code.
+Then you may find better methods or classes.
 
 ---
+# leaks
 
-# テストが適切に書かれいてるか
+- Strong reference to Acitivity
+- Use it watching the profiler of AS
 
-- メソッドの追加
-- 条件文の追加などで、境界値が増えていないか
+^
+When you repeat screen transition,
+memory usage may increase.
+that's the leak
 
-^ 後からテスト書くのは大変なので、簡単なものだけでも良いので、テストを書けるクラスには書いておいた方が得
+---
+
+# Tests
+
+- Are proper tests added?
+- Are tests enough for additional conditions or boundary values?
+
+^
+since it's often hard to add tests later,
+we had better write tests as ealy as possible.
 
 ---
 # 変更していないところも見る
