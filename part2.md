@@ -21,7 +21,7 @@ android-studio.sh ~/code-review/branch_name
 ```
 
 ^ To avoid wasting your time, we usually do operational check before code review.
-Sometime gradle builds fail after checking out the branch which has changes about databinding, build.gradle and so forth, 
+Sometime gradle builds fail after checking out the branch which has changes about databinding, build.gradle and so forth,
 using different directory makes build stable.
 
 ---
@@ -32,77 +32,87 @@ using different directory makes build stable.
 - Is using animation properly?
 - Is not like iOS UI?
 
+tips to check
 
-Developer options are useful to check details.
+- Developer options
+  - Show layout bounds
+  - Change nimation scale
 
-^ Unfortunately designers are not always familiar with Material Design. 
-So we need to check if it's on the android way.
-
----
-
-# 裏のUI
-
-- エラーをハンドリング適切にしているか
-- データが0件の時でも不自然ではないか
-- デバッグコードを仕込んで動かす
-- 必要に応じて `delay` を入れてローディングが長くなるようにする
-- エミュレータの通信速度の変更, air plane mode
-
-^ APIやDBから取得した値を表示できただけで安心していないでしょうか?
-必要なデータが取得できなかった場合、0件だった場合、すごく長い名前の表示なども確認するとQAでの手もどりが減らせます。
+^ Unfortunately designers are not always familiar with Material Design or Android friendly UI.
+So we need to check if it's on the Android way.
 
 ---
-# ライフサイクル
 
-- ホームボタンからの復帰
-- 画面回転
-- バックグラウンドプロセスキル
-- 手当たり次第連打
+# UI behind UI
 
-^ 自分がされたら嫌だなと思う事を、思い付く限りやってみるのがお勧めです。
-たぶんレビュイーはやってないでしょうから。
+- Is handling errors?
+- Is taking care of no data?
+- Is using progress indicator properly?
+
+tips to check
+
+- add debug code directly
+- `delay`
+- Airplane mode
+
+^ Only showing data is not everything.
+We should handle various errors or empty state.
 
 ---
-# パフォーマンス
+# Lifecycle
 
-- Activityの起動やRecyclerViewのスクロールなどスムーズか?
+- Does it work on returning from home screen?
+- Is supporting screen rotation?
+- Does it work on killing process?
+- Does it work on mashing buttons?
+
+^ Imagine what you don't want users to do. Just do it.
+
+---
+# Performance
+
+- Is working fast? 1s is slow.
+- Can you scroll RecyclerView smoothly?
 - TTI < 200ms
 
-^ 一般的には画面遷移の際に、スクロールしたりボタンが押せるようになるまでの時間が300msくらいを越えると、ユーザーは遅いと感じると言われています。
-遅いかも?と思ったら計測してみましょう。
+^ If you feel slow, you should measure the time to interactive.
 
 ---
-# ビルド
+# Build
 
-- Logcat やビルド出力でWarningなどが増えてないか
-- Proguardルールを変えたりライブラリを追加したらProguardビルドをする
-- Debug, Releaseに関わるものはReleseビルドでもチェックする(firebase jsonなど)
+- Warnings in build log or logcat
+- Try proguard build or release build when relevant file was changed
 
-^ ビルドに関する変更は些細なものであっても、面倒な問題を起こすことがあります。
-リリース直前に気付くよりはコードレビューの時点で気付けると良いでしょう。
-
----
-# コードを読む
-
-- Android Studioで見る
-- コードナビゲーションを利用
-- 気になったら実際にコードを変えてみる
-  - コードの削除により、不要になったコードなどはgithub diffだけでは気付かない
-  
----
-# 良いコード/悪いコード
-
-大事にしたいルールやアーキテクチャーををチームで共有する
-
-- わかりやすい
-- 変更が簡単である
-- 適切な名前空間
-
-^ アーキテクチャーやデザインパターンについて、正しさや美しさばかりに傾倒するのは得策とは言えません。
-あまり詳しくない人でも、簡単に機能追加や変更が可能になるように活用されるべきです。
+^ changes related to build setting makes sometimes big issue.
+Keep in mind to find troublesome problems as early as possible.
 
 ---
-# layout
+# Read code
+
+- use Android Studio
+- If you have question, don't hesitate to check actual operation.
+- Is there any newly unnecessary code by that change.
+
+^
+codes which became unnecessary with changes are not easy to find.
+
+---
+# Values
+
+We should share common values in our team.
+
+- Easy to read
+- Easy to change
+- Proper package name
+
+^
+In our team, elegance of architecture doesn't matter.
+Releases of Android platform or libraries whih we use are very frequent.
+We need to update them as early as possible.
+So we focus on how is it easy to change, fix or add new features.
+
+---
+# Layout
 
 - 気になるところは実際に変更を加えてみる
 - 不要そうな属性やネストを消したときの挙動を確認する
@@ -112,7 +122,7 @@ So we need to check if it's on the android way.
 
 - ignore whitespaces
 - コードサジェスト機能
-  
+
 ---
 # フォーマット
 
