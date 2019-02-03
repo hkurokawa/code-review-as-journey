@@ -109,9 +109,11 @@ OK.  Let's take a look at a typical code review process.  And, here, I am using 
 Code review is like a journey.  You are handed over a map with a route on it, a Pull Request, and you walk down to the goal following the route and see how good the route is, I mean, verify how good the code is.
 
 ---
-# 1. Understand the Background and the Goal
+![](img/person-mountain.jpg)
 
-[image: a man is seeing a map]
+[.footer: Photo by [Christopher Burns](https://unsplash.com/photos/-jbsw_GUK74?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+# 1. Understand the Background and the Goal
 
 ^
 When you have a map, what do you do first?  Yes, find the goal.
@@ -121,9 +123,11 @@ If you start walking without knowing what the problem is, I am sure you cannot t
 If you have any questions about them, ask the reviewee.  The sooner, the better.
 
 ---
-# 2. Go through the strategy and what was made
+![](img/map.jpg)
 
-[image: a finger on the map]
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+# 2. Go through the strategy and what was made
 
 ^
 OK.  Now I can go for a trip!  Let's start!  No, no.  A well experienced traveller examines the route before starting his or her journey.
@@ -135,9 +139,11 @@ I gave that feedback on the reviewee and I and reviewee agreed on it would be ra
 So read the strategy and the list of changes and give a feedback to the reviewee if necessary.
 
 ---
-# 3. Verify the change really takes you to the goal
+![](img/car-on-road.jpg)
 
-[image: a man is driving on the road]
+[.footer: Photo by [delfi de la Rua](https://unsplash.com/photos/OrCvp6dFrKc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+# 3. Verify the change really takes you to the goal
 
 ^
 Now you can start walking. And here is my advice.
@@ -152,9 +158,11 @@ What if the network is offline?  What if the activity is destroyed?
 Review the change keeping these kind of points in your mind would make your review more thoughtful.
 
 ---
-# 4. Look into every changes one by one
+![](img/man-on-branch.jpg)
 
-[image: a man is walking and looking around]
+[.footer: Photo by [Caleb Jones](https://unsplash.com/photos/J3JMyXWQHXU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+# 4. Look into every changes one by one
 
 ^
 Now is the time to look into changes in detail.
@@ -167,9 +175,11 @@ This means you are more likely to be able to understand why each change is made 
 This is the very heart of the code review.  Thorough this process, you could share knowledge and skill with the reviewee efficiently.
 
 ---
-# 5. Look back the change from the goal
+![](img/sitting-on-cliff.jpg)
 
-[image: a man on the mountain looks back the route]
+[.footer: Photo by [Vlad Bagacian](https://unsplash.com/photos/d1eaoAabeXs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+# 5. Look back the change from the goal
 
 ^
 Now you have done the code review.  Your job is done?
@@ -183,9 +193,12 @@ Review is not just pointing out a concern or a potential bug.
 If you feel it is good, just express that.
 
 ---
-# 6. Have a conversation with the reviewee
 
-[image: a man having a conversation with another]
+![](img/journey-map.jpg)
+
+[.footer: Photo by [rawpixel](https://unsplash.com/photos/lRssALOk1fU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+# 6. Have a conversation with the reviewee
 
 ^
 OK.  Now your review is done.
