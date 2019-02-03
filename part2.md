@@ -172,21 +172,24 @@ since it's often hard to add tests later,
 we had better write tests as ealy as possible.
 
 ---
-# Unchanged code
+# Side effects
 
-- 使われなくなったメソッドやフィールドの確認
-- EventBusのように pubsub系に影響がないか
-- minSdkVersionを上げた時などは多くの制御文を消せるかもしれない
+- Adding Permission
+- Moving Application class
+
+^
+If you add new Dangerous permission to the AndroidManifest,
+auto update will be disabled.
+So check if it's really necessary permission.
+
+And another one is an actual failure which I made.
+When I changed package name of Application class as a part of refactoring,
+do you know what happened?
+Users couldn't launch app from their home screen,
+because the icon points the intent to former package name of application.
 
 ---
-# アプリの外側への影響
-
-- パーミッションの変更
-- Dangerousなものが追加されると自動アップデートが無効になる
-- Application クラスをリネーム
-
----
-# 全体を考えなおす
+# Reconsider
 
 - 自分のコメントが勘違いだったりしないか考える。こういう事情があってこっちにした、という背景が見えてくることもある。
 - 自分がイチから作るとしたらどうするか考える
