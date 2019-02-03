@@ -14,7 +14,7 @@ Some reviewers give considerate good feedback to a peer and they could have grea
 I think there are some techniques on how to do a good code review.  In term of Android app development, there are some tips and tricks to do efficient code review as well.
 Today we would like to share that.
 
---- 
+---
 
 # What is Code Review For?
 
@@ -353,8 +353,8 @@ Save your time with automation.
 ---
 # 3rd party libraries
 
-- Is trusty?
-- Is maintained well?
+- Is it trusty?
+- Is it maintained well?
 - Is there better alternatives?
 
 ^
