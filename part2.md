@@ -4,7 +4,8 @@ Read the description
 
 - Understand the background of the problem and check how it is solved
 
-^ First of all let's check if the content was written using the template.
+^ So I'm gonna dig a little deeper into each steps.
+First of all let's check if the content was written using the template.
 If there is something you don't understand, don't hesitate to ask reviewee it.
 It's usual for people to forget writing some details.
 
@@ -185,28 +186,32 @@ So check if it's really necessary permission.
 And another one is an actual failure which I made.
 When I changed package name of Application class as a part of refactoring,
 do you know what happened?
-Users couldn't launch app from their home screen,
-because the icon points the intent to former package name of application.
+Users couldn't launch app from shortcut on their home screen,
+because the entity of shortcut is like a bookmark which refers to the intent of former package name of application.
 
 ---
-# Reconsider
+# Look back
 
-- 自分のコメントが勘違いだったりしないか考える。こういう事情があってこっちにした、という背景が見えてくることもある。
-- 自分がイチから作るとしたらどうするか考える
-
-^ single commnetよりはGitHubのコードレビュー機能便利
-
----
-# フィードバックを行う
-
-- 変更が必要であれば具体的な質問と依頼をする
-  - コードスニペットを貼る
-  - 不具合であれば、発生条件と手順
-- 良いと思ったところは素直に褒める
+- Check if your opinion or recognition is right.
+- Imagine what you would  do if you were the reviewee.
 
 ^
-気軽にコメントできる雰囲気を作る方がレビューが楽になる
-気軽にPRを出せる and 気軽にレビューできる雰囲気
+In the end of code reading, you may have different impression from the begining.
+To avoid submit misunderstanding comment,
+
+---
+# Give your feedback
+
+- Feedback details to improve the code
+  - Use code suggestion
+  - Conditions and steps to repro bug
+- Praises are welcome
+
+^
+If you think some changes is necessary, feedback your suggestion as detail as possible.
+
+And if you feel good to see the code, don't hesitate to feedback your feeling.
+That helps you to be positive to communicate each other.
 
 ---
 
