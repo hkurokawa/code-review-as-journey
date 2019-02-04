@@ -94,7 +94,7 @@ I mean, how you can be sure that the change solves the problem and does not caus
 ---
 # Pull Request template
 
-[image: a Pull Request template with dummy information]
+![inline](img/pr.png)
 
 ^
 Just for your reference, here is a template I am using for Pull Request.
@@ -102,6 +102,10 @@ I am always asking people to fill out this template when submitting a Pull Reque
 Then you can easily get the summary of the changes required for you to review.
 
 ---
+![](img/book.jpg)
+
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/p1bHqLjKwi4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/story-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
 # The story of code review
 
 ^
