@@ -240,10 +240,12 @@ git worktree add ~/code-review/branch_name branch_name
 android-studio.sh ~/code-review/branch_name
 ```
 
-^ 
-After you understand the problem, let's do operational check.
+^
+After you understand the problem and the background, let's do operational check.
 To avoid wasting our time, we usually do operational check before code review.
 Sometimes gradle builds fail after checking out a branch which has changes about databinding, build.gradle and so forth.
+So we use the git worktree command.
+The worktree command enables check out the branch on another directory.
 Using a different directory helps make the build stable.
 
 ---
@@ -264,6 +266,9 @@ Tips to check
 If there are changes about UI, check the UI with caution.
 Unfortunately everyone is not always familiar with Material Design or Android friendly UI.
 So we need to check if it's done the Android way.
+To check the UI with caution, some developer options are useful.
+The `show layout bound` option is good to check the margin of layout.
+If you want to watch the animation carefully, the "Change animation scale" is helpful.
 
 ---
 
@@ -284,7 +289,7 @@ Next topic is more troublesome.
 Only showing data is not everything.
 We should handle various errors or empty state.
 So even if the data is displaied normally, we should check if those handling works.
-To check the error handling, we may need to add some changes or use some settings of emulator to debug.
+To check the error handling, we may need to add some changes or use some settings of emulator to debug like Airplane mode
 
 ---
 # Lifecycle
