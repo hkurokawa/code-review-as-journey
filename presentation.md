@@ -216,10 +216,17 @@ Read the description
 
 - Understand the background of the problem and check how it is solved
 
-^ So I'm gonna dig a little deeper into each steps.
+^
+So I'm gonna dig a little deeper into each steps.
 First of all let's check if the content was written using the template.
-If there is something you don't understand, don't hesitate to ask reviewee it.
+If reviewee doesn't use template or there is something you don't understand, don't hesitate to ask reviewee it.
 It's usual for people to forget writing some details.
+Someone may feel it's too bother to write details using the template,
+it's very helpful for the reviewer because the reviewer can feel free to review with detail informations.
+On another note,  we recently check pull requests left not reviewed in the stand-up meeting everyday,
+also that's good to reduce pull requests not reviwed.
+
+[.build-lists: true]
 
 ---
 
@@ -233,9 +240,11 @@ git worktree add ~/code-review/branch_name branch_name
 android-studio.sh ~/code-review/branch_name
 ```
 
-^ To avoid wasting our time, we usually do operational check before code review.
-Sometimes gradle builds fail after checking out a branch which has changes about databinding, build.gradle and so forth,
-using a different directory helps make the build stable.
+^ 
+After you understand the problem, let's do operational check.
+To avoid wasting our time, we usually do operational check before code review.
+Sometimes gradle builds fail after checking out a branch which has changes about databinding, build.gradle and so forth.
+Using a different directory helps make the build stable.
 
 ---
 
@@ -245,13 +254,15 @@ using a different directory helps make the build stable.
 - Is it using animation properly?
 - Is it not like iOS UI?
 
-tips to check
+Tips to check
 
 - Developer options
   - Show layout bounds
   - Change animation scale
 
-^ Unfortunately designers are not always familiar with Material Design or Android friendly UI.
+^
+If there are changes about UI, check the UI with caution.
+Unfortunately everyone is not always familiar with Material Design or Android friendly UI.
 So we need to check if it's done the Android way.
 
 ---
@@ -262,24 +273,32 @@ So we need to check if it's done the Android way.
 - Does it work even with no data?
 - Is it using the progress indicator properly?
 
-tips to check
+Tips to check
 
 - add debug code directly
-- use `delay`
+- use `delay` of Observable
 - Airplane mode
 
-^ Only showing data is not everything.
+^
+Next topic is more troublesome.
+Only showing data is not everything.
 We should handle various errors or empty state.
+So even if the data is displaied normally, we should check if those handling works.
+To check the error handling, we may need to add some changes or use some settings of emulator to debug.
 
 ---
 # Lifecycle
 
 - Does it work after returning from the home screen?
-- Does it support screen rotation?
+- Does it work on screen rotation?
 - Does it work after the process was killed?
+- Does it manage the Disposable or Closable at the right timing
 - Can it handle buttons being tapped very fast?
 
-^ Imagine what you don't want users to do. Just do it.
+^
+This is the biggest and unavoidable topics.
+We need to check a lot of things.
+Imagine what you don't want users to do. Just do it.
 
 ---
 # Performance
