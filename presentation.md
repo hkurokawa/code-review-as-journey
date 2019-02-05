@@ -4,14 +4,14 @@
 
 ^
 Hi, good morning everyone.
-I am Hiroshi Kurokawa and (Nanao-san says his name). Today we are giving a talk about code review.
+I am Hiroshi Kurokawa and (Nanao-san says his name). Today we are talking about code review.
 Is anyone doing code review?  Raise your hand if you are doing code review as a part of your daily job.
 Thank you.
 We are doing code review probably several times everyday.  And, of course, our code is reviewed by peers as well.
 It is so common in the development process that we sometimes think we know well about code review.
 But I noticed there are good reviews and not-good ones.
 Some reviewers give considerate good feedback to a peer and they could have great dicussion to make the product better while others just point out some typos.
-I think there are some techniques on how to do a good code review.  In terms of Android app development, there are some tips and tricks to do efficient code review as well.
+I think there are some techniques on how to do a good code review.  In term of Android app development, there are some tips and tricks to do efficient code review as well.
 Today we would like to share that.
 
 ---
@@ -20,7 +20,7 @@ Today we would like to share that.
 
 ^
 Before talking about code review.  I would like to give a brief definition about code review.  Especially about what it is done for.
-Code review has many aspects and when I just say "code review", you might have a different perception than me.
+Code review has many aspects and when I just tell "code review", you might have different perception than me.
 Someone might think it is for finding out a bug while others might think it is for discussing specifications.
 
 ---
@@ -43,7 +43,7 @@ Here what I want to say is if you feel the spcification has a problem, involve t
 
 [.build-lists: true]
 ---
-## Code Review is for Collaboration
+## Code Review is for collaboration
 - Sharing knowledge 📖
 - Sharing skill 🔧
 - Making a good product through discussion 🗯
@@ -66,7 +66,7 @@ This is the purpose of code review.  Collaborating with your coworker to make a 
 
 [.build-lists: true]
 ---
-# What Information is required for Code Review?
+# What information is required for Code Review?
 - Goal
 - Background
 - Strategy
@@ -81,7 +81,7 @@ Anyway, there is a context for this change and doing code review without knowing
 Next, if the Pull Request is rather large, take strategy into consideration.  How does your reviewee tackle the problem?
 Just adding a patch to the existing code or trying to refactor a component to make the change easier?
 Is he or she building up a custom view or adding a small modification on an existing one?
-You should keep in mind the overall strategy of the change.
+You should keep in mind the overall strategy of the change is.
 And if you have any questions or concerns about it, ask the reviewee then.
 The sooner the feedback is, the better for the reviewee to fix his or her change.
 And, of course, you have a list of changes included in the Pull Request.
@@ -92,9 +92,9 @@ I mean, how you can be sure that the change solves the problem and does not caus
 [.build-lists: true]
 
 ---
-# Pull Request Template
+# Pull Request template
 
-![inline](img/pr.png)
+[image: a Pull Request template with dummy information]
 
 ^
 Just for your reference, here is a template I am using for Pull Request.
@@ -102,11 +102,7 @@ I am always asking people to fill out this template when submitting a Pull Reque
 Then you can easily get the summary of the changes required for you to review.
 
 ---
-![](img/book.jpg)
-
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/p1bHqLjKwi4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/story-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
-
-# The Story of Code Review
+# The story of code review
 
 ^
 OK.  Let's take a look at a typical code review process.  And, here, I am using an analogy for the code review process - a journey.
@@ -131,12 +127,12 @@ If you have any questions about them, ask the reviewee.  The sooner, the better.
 
 [.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
-# 2. Go through the Strategy and What was Made
+# 2. Go through the strategy and what was made
 
 ^
 OK.  Now I am ready to go on a trip!  Let's start!  No, no.  A well experienced traveller examines the route before starting his or her journey.
 Of course, you do not need to check the details.  But it is valuable to have a rough idea on how the route is.  For example, does the route avoid a mountain in clockwise or counter-clockwise?
-Or does the route follow the shortest but hard path or longer but easy path?
+Or does the route follows the shortest but hard path or longer but easy path?
 If the Pull Request you are reviewing describes some concerns, check them at this time.  You might be able to advise something on them here.
 For example, I once reviewed a Pull Request and noticed a standard widget can be used with a few modification instead of building a custom widget from scratch.
 I gave that feedback to the reviewee and we agreed that it would be better solution.  Although he had to remove most part of his code, we did not need to waste time on the custom widgets to be removed at last.
@@ -147,7 +143,7 @@ So read the strategy and the list of changes and give a feedback to the reviewee
 
 [.footer: Photo by [delfi de la Rua](https://unsplash.com/photos/OrCvp6dFrKc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
-# 3. Verify if the Change Really Takes You to the Goal
+# 3. Verify if the change really takes you to the goal
 
 ^
 Now you can start walking. And here is my advice.
@@ -165,7 +161,7 @@ If you review the change while keeping these kind of points in mind, it would ma
 
 [.footer: Photo by [Caleb Jones](https://unsplash.com/photos/J3JMyXWQHXU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
-# 4. Look into Every Changes One by One
+# 4. Look into every changes one by one
 
 ^
 Now is the time to look into changes in detail.
@@ -182,7 +178,7 @@ This is the very heart of the code review.  Thorough this process, you could sha
 
 [.footer: Photo by [Vlad Bagacian](https://unsplash.com/photos/d1eaoAabeXs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
-# 5. Look Back on the Change from the Goal
+# 5. Look back on the change from the goal
 
 ^
 Now you have finished the code review and reached the goal.  Is your job done?
@@ -201,7 +197,7 @@ If you feel it is good, just express that.
 
 [.footer: Photo by [rawpixel](https://unsplash.com/photos/lRssALOk1fU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
-# 6. Have a Conversation with the Reviewee
+# 6. Have a conversation with the reviewee
 
 ^
 OK.  Now your review is finally done.
@@ -385,7 +381,7 @@ not only package names, naming is actually one of the most difficult process in 
 
 ^
 Reviewing layout xml is painful.
-But we had better watch layout carefully, because sometimes unnecessary stuffsis left after changes.
+But we had better watch layout carefully, because sometimes unnecessary stuff is left after changing.
 If you have any concern, change code and check how it works.
 
 ---
@@ -402,29 +398,38 @@ If you have any concern, change code and check how it works.
 ```
 
 ^
+Discussing code format makes us exhausted.
 Settings about coding style or code inspection can be shared in repository.
 Save your time with automation.
-Adding those settings to gitignore is helpful.
+Adding those settings to `gitignore` is helpful.
 
 ---
 # 3rd party libraries
 
-- Is it trusty?
+- Is it trustworthy?
 - Is it maintained well?
-- Is there better alternatives?
+- Are there better alternatives?
 
 ^
-If you don't know the new library,
+1. When new library is added, check if it's trustworthy,
+2. maintained well
+3. and there are better alternatives.
+Even if you don't know the new library,
 read the document and source code.
 Then you may find better methods or classes.
 
 ---
 # leaks
 
-- Strong reference to Acitivity
 - Use it watching the profiler of AS
+- Does it have a strong reference to Acitivity?
+- Does it have a strong reference to Acitivity?
 
 ^
+Also next topic is big one.
+We don't have to be always sensitive about memory leak.
+But it's good have a look profiler, when you have any concern.
+1.For example, strong reference to Activity, forgetting close Closable
 When you repeat screen transition,
 memory usage may increase.
 that's the leak
