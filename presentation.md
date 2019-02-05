@@ -212,18 +212,17 @@ Now I will switch to Nanao-san.
 
 # Understanding the background
 
-Read the description
-
+- Read the description
+- Are enough details written to review it or is it using pull request template?
 - Understand the background of the problem and check how it is solved
 
 ^
-So I'm gonna dig a little deeper into each steps.
-First of all let's check if the content was written using the template.
+1.So I'm gonna dig a little deeper into each steps.
+2.First of all let's check if the content was written using the template.
 If reviewee doesn't use template or there is something you don't understand, don't hesitate to ask reviewee it.
-It's usual for people to forget writing some details.
-Someone may feel it's too bother to write details using the template,
-it's very helpful for the reviewer because the reviewer can feel free to review with detail informations.
-On another note,  we recently check pull requests left not reviewed in the stand-up meeting everyday,
+3.Someone may feel it's too bother to write details using the template,
+but it's very helpful for the reviewer because the reviewer can feel free to review it with detail informations.
+On another note,  we recently check pull requests left not reviewed in the stand-up meeting every morning,
 also that's good to reduce pull requests not reviwed.
 
 [.build-lists: true]
@@ -249,26 +248,38 @@ The worktree command enables check out the branch on another directory.
 Using a different directory helps make the build stable.
 
 ---
+# Build
+
+- Warnings in build log or logcat
+- Try proguard build or release build when relevant file was changed
+
+^
+After adding worktree, let's build the app.
+1. Then have a look at build log and logcat.
+Changes related to build setting makes sometimes big issue.
+Keep in mind to find troublesome problems as early as possible.
+2. Proguard too.
+If there are changes about proguard rules, try proguard build too.
+
+[.build-lists: true]
+
+---
 
 # UI
 
 - Is it along the guidelines of Material Design or your team's?
+  - Is it not like iOS UI?
 - Is it using animation properly?
-- Is it not like iOS UI?
-
-Tips to check
-
-- Developer options
-  - Show layout bounds
   - Change animation scale
 
 ^
-If there are changes about UI, check the UI with caution.
-Unfortunately everyone is not always familiar with Material Design or Android friendly UI.
+1.If there are changes about UI, check the UI with caution.
+1-2.Unfortunately everyone is not always familiar with Material Design or Android friendly UI.
 So we need to check if it's done the Android way.
-To check the UI with caution, some developer options are useful.
-The `show layout bound` option is good to check the margin of layout.
-If you want to watch the animation carefully, the "Change animation scale" is helpful.
+2.If you want to watch the animation carefully,
+2-2.the "Change animation scale" is helpful.
+
+[.build-lists: true]
 
 ---
 
@@ -276,26 +287,24 @@ If you want to watch the animation carefully, the "Change animation scale" is he
 
 - Is it handling errors?
 - Does it work even with no data?
-- Is it using the progress indicator properly?
-
-Tips to check
-
-- add debug code directly
-- use `delay` of Observable
-- Airplane mode
+  - add debug code directly
+  - Airplane mode
 
 ^
 Next topic is more troublesome.
-Only showing data is not everything.
+1,2.Only showing data is not everything.
 We should handle various errors or empty state.
+2-2.To check the error handling, we may need to add some changes or use some settings of emulator to debug like Airplane mode
 So even if the data is displaied normally, we should check if those handling works.
-To check the error handling, we may need to add some changes or use some settings of emulator to debug like Airplane mode
+
+[.build-lists: true]
 
 ---
+
 # Lifecycle
 
 - Does it work after returning from the home screen?
-- Does it work on screen rotation?
+- Does it work after screen rotation?
 - Does it work after the process was killed?
 - Does it manage the Disposable or Closable at the right timing
 - Can it handle buttons being tapped very fast?
@@ -303,25 +312,29 @@ To check the error handling, we may need to add some changes or use some setting
 ^
 This is the biggest and unavoidable topics.
 We need to check a lot of things.
-Imagine what you don't want users to do. Just do it.
+1.check onPuause,
+2.onStop and onStart,
+3.onDestroy and onCreate
+4.Pay attention to subscription or database objects
+5.and state of Fragment or Activity too
+Anyway, imagine what you don't want users to do. Just do it.
+
+[.build-lists: true]
 
 ---
 # Performance
 
 - Is working fast? 1s is slow.
-- Can you scroll RecyclerView smoothly?
-- TTI < 200ms
+- Is it taking care of battery?
+  - Can you scroll RecyclerView smoothly?
 
-^ If you feel slow, you should measure the time to interactive.
+^
+1.For user working fast is one of the most important things.
+Take care of dealing with complex data.
+2.Battery too.
+We need to a If you feel slow, you should measure the time to interactive.
 
----
-# Build
-
-- Warnings in build log or logcat
-- Try proguard build or release build when relevant file was changed
-
-^ changes related to build setting makes sometimes big issue.
-Keep in mind to find troublesome problems as early as possible.
+[.build-lists: true]
 
 ---
 # Read code
@@ -331,22 +344,34 @@ Keep in mind to find troublesome problems as early as possible.
 - Is there any newly unnecessary code by that change.
 
 ^
+1.First, it's obvious thing. Use Android Studio, so that we can read relavant code too.
+2.Second, is obvious as first one.
+3.Last one is a little difficult to practice.
 codes which became unnecessary with changes are not easy to find.
+
+[.build-lists: true]
 
 ---
 # Values
 
 We should share common values in our team.
 
-- Easy to read
-- Easy to change
+- Easy to read and change
 - Proper package name
 
 ^
-In our team, elegance of architecture doesn't matter.
-Releases of Android platform or libraries which we use are very frequent.
+Next topic is abstract.
+Regarding coding rule or architecture, What is valueable thing in your team?
+1.In our team, elegance of architecture doesn't matter.
+Easy and simple way is the best way.
+Because releases of Android platform or libraries which we use are very frequent.
 We need to update them as early as possible.
 So we focus on how is it easy to change, fix or add new features.
+2.To develop faster, also package names should be proper.
+This is off topic, but many Japanese programmers are not good at English,
+not only package names, naming is actually one of the most difficult process in programming in Japan.
+
+[.build-lists: true]
 
 ---
 # Layout
@@ -355,6 +380,8 @@ So we focus on how is it easy to change, fix or add new features.
 - unnecessary nest
 
 ^
+Reviewing layout xml is painful.
+But we had better watch layout carefully, because sometimes unnecessary stuffsis left after changes.
 If you have any concern, change code and check how it works.
 
 ---
@@ -371,8 +398,9 @@ If you have any concern, change code and check how it works.
 ```
 
 ^
-Settings aboutg coding style or code inspection can be shared in repository.
+Settings about coding style or code inspection can be shared in repository.
 Save your time with automation.
+Adding those settings to gitignore is helpful.
 
 ---
 # 3rd party libraries
