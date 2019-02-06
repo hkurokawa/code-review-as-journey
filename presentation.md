@@ -9,11 +9,14 @@ I am Hiroshi Kurokawa and (Nanao-san says his name). Today we are giving a talk 
 Is anyone doing code review?  Raise your hand if you are doing code review as a part of your daily job.
 Thank you.
 We are doing code review probably several times everyday.  And, of course, our code is reviewed by peers as well.
+In other words, we are reviewers and reviewees at the same time.
 It is so common in the development process that we sometimes think we know well about code review.
 But I noticed there are good reviews and not-good ones.
-Some reviewers give considerate good feedback to a peer and they could have great dicussion to make the product better while others just point out some typos.
+Some reviewers give considerate good feedback to a peer and they could have a great dicussion to make the product better while others just point out some typos.
 I think there are some techniques on how to do a good code review.  In terms of Android app development, there are some tips and tricks to do efficient code review as well.
 Today we would like to share that.
+In the first part, I will explain the general strategy of the code review.  What is code reivew?  How should we do that?
+In the second part, Nanao-san will introduce tips and techniques on doing a good review of Android app code.
 
 ---
 
@@ -94,8 +97,6 @@ I mean, how you can be sure that the change solves the problem and does not caus
 [.build-lists: true]
 
 ---
-# Pull Request Template
-
 ![inline](img/pr.png)
 
 ^
