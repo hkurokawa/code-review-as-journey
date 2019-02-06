@@ -558,8 +558,16 @@ that's the leak
 [.footer: Photo by [Nicolas Thomas](https://unsplash.com/photos/3GZi6OpSDcY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
-Since it's often hard to add tests later,
-we had better write tests as ealy as possible.
+What I want to talk about tests,
+good code is easy to test.
+In our team, test coverage is not so high,
+and limited to only unit tests for model, viewmodel and simple utilities.
+There are no end to end tests.
+I don't reject a pull request only because no tests are added.
+If it's enough good to add tests later, it's fine I guess.
+If not, I will request adding tests.
+But generally it's often hard to add tests later.
+So we had better write tests as ealy as possible.
 
 ---
 ![left](img/medicine.jpg)
@@ -571,6 +579,7 @@ we had better write tests as ealy as possible.
 [.footer: Photo by [rawpixel](https://unsplash.com/photos/K1PGQK2coPM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
+Next I introduce some sideeffects in Android dev.
 1.If you add new Dangerous permission to the AndroidManifest,
 auto update will be disabled.
 So check if it's really necessary permission.
@@ -593,6 +602,8 @@ because the entity of shortcut is like a bookmark which refers to the intent of 
 1. **Look back on the change from the goal**
 
 ^
+Then code reading is almost done.
+Next we look back on the change from the goal.
 
 ---
 ![left](img/sitting-on-cliff.jpg)
@@ -604,7 +615,7 @@ because the entity of shortcut is like a bookmark which refers to the intent of 
 ^
 In the end of code reading, you may have different impression from the begining.
 Let's organize your thoughts to give your feedback.
-Don't forget to priolitize each issue.
+Don't forget to prioritize each issue.
 It makes easier to talk about issues.
 
 ---
@@ -619,6 +630,8 @@ It makes easier to talk about issues.
 1. **Have a conversation with the reviewee**
 
 ^
+The last process is a feedback.
+let's have a conversation with the reviewee.
 
 ---
 ![left](img/flower.jpg)
