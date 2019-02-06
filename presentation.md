@@ -420,6 +420,8 @@ Even if you don't know the new library,
 read the document and source code.
 Then you may find better methods or classes.
 
+[.build-lists: true]
+
 ---
 # leaks
 
@@ -429,8 +431,8 @@ Then you may find better methods or classes.
 ^
 Also next topic is big one.
 We don't have to be always sensitive about memory leak.
-But it's good have a look profiler, when you have any concern.
-1.For example, strong reference to Activity, forgetting close Closable
+1.But it's good have a look profiler, when you have any concern.
+2.For example, strong reference to Activity, forgetting close Closable
 When you repeat screen transition,
 memory usage may increase.
 that's the leak
@@ -453,14 +455,16 @@ we had better write tests as ealy as possible.
 - Moving Application class
 
 ^
-If you add new Dangerous permission to the AndroidManifest,
+1.If you add new Dangerous permission to the AndroidManifest,
 auto update will be disabled.
 So check if it's really necessary permission.
-And another one is an actual failure which I made.
+2.And second one is an actual failure which I made.
 When I changed package name of Application class as a part of refactoring,
 do you know what happened?
 Users couldn't launch app from shortcut on their home screen,
 because the entity of shortcut is like a bookmark which refers to the intent of former package name of application.
+
+[.build-lists: true]
 
 ---
 # Look back
@@ -488,3 +492,8 @@ That helps you to be positive to communicate each other.
 ---
 
 # [fit] FIN
+
+^
+That's all.
+We're happy if you get some hints from our talk.
+Thank you all.
