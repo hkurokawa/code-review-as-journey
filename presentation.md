@@ -393,13 +393,13 @@ check if those are reuse objects, or using cache properly.
 
 ^
 Next topic is more troublesome.
-1,2.Only showing data is not everything.
+1,2. Only showing data is not everything.
 We should handle various errors or empty state.
 Check how it works, when the response from API was unexpected.
-2-2.To check handling errors,
+2-1. To check handling errors,
 we may need to add some changes
-or use some settings of emulator to debug like Airplane mode.
-Even if the data is displaied normally, we should check if those handling works.
+2-2. or use some settings of emulator to debug like Airplane mode.
+Even if the data is displayed normally, we should check if those handling works.
 
 [.build-lists: true]
 
@@ -419,7 +419,7 @@ Even if the data is displaied normally, we should check if those handling works.
 [.footer: Photo by [Robert Anasch](https://unsplash.com/photos/ZFYg5jTvB4A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
-This is the biggest and unavoidable topics.
+This is the biggest and unavoidable topic.
 We need to check a lot of things.
 1.check the state with onPuause and onResume,
 2.onStop and onStart,
@@ -462,8 +462,8 @@ If you feel it's slow, you should measure the time to interactive.
 ^
 Finally, let's read the code!
 1.First, it's obvious thing. Use Android Studio, so that we can read relavant code too.
-2.Second, is obvious as first one.
-3.Last one is a little difficult to practice.
+2.Also Second is obvious.
+3.The last one is a little difficult to practice.
 codes which became unnecessary with changes are not easy to find.
 
 [.build-lists: true]
@@ -484,8 +484,8 @@ Reviewing layout xml is painful.
 But we had better watch layout carefully,
 1&2. because sometimes unnecessary stuff is left after changing.
 If you have any concern, change code and check how it works.
-3. If you find deprecated layout components like PercentLayout,
-think about replace them, or  create an issue for that.
+3. If you find deprecated components like PercentLayout,
+think about replace them, or create an issue for that.
 
 ---
 ![left](img/types.jpg)
@@ -506,7 +506,7 @@ think about replace them, or  create an issue for that.
 
 ^
 Discussing code format makes us exhausted.
-We had better share settings about coding style or code inspection in repository.
+We had better share settings about coding style or inspection rule in repository.
 Save your time with automation.
 Adding those settings to `gitignore` as below is helpful.
 
@@ -524,8 +524,8 @@ Adding those settings to `gitignore` as below is helpful.
 1. When new library is added, check if it's trustworthy,
 2. maintained well
 3. and there are better alternatives.
-Even if you don't know the new library,
-read the document and source code.
+If you don't know the new library,
+read the document and source code in most.
 Then you may find better methods or classes.
 
 [.build-lists: true]
@@ -536,17 +536,21 @@ Then you may find better methods or classes.
 
 - Use it watching the profiler of AS
 - Does it have a strong reference to Activity?
+- Does it close Closable?
 
 [.footer: Photo by [Luis Tosta](https://unsplash.com/photos/SVeCm5KF_ho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
 Also next topic is big one.
 We don't have to be always sensitive about memory leak.
-1.But it's good have a look profiler, when you have any concern.
-2.For example, strong reference to Activity, forgetting close Closable
-When you repeat screen transition,
-memory usage may increase.
-that's the leak
+1. But it's good have a look at profiler, when you have any concern.
+2. For example, strong reference to Activity,
+3. forgetting close Closable stuff.
+The easiest way to find leaks is
+to repeat screen transition, watching memory profiler.
+If the memory usage increases, that's the leak
+
+[.build-lists: true]
 
 ---
 ![right](img/tests.jpg)
@@ -558,15 +562,15 @@ that's the leak
 [.footer: Photo by [Nicolas Thomas](https://unsplash.com/photos/3GZi6OpSDcY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
-What I want to talk about tests,
-good code is easy to test.
-In our team, test coverage is not so high,
+What I want to talk about tests is very simple.
+Good code is easy to test.
+In our team, the test coverage is not so high,
 and limited to only unit tests for model, viewmodel and simple utilities.
 There are no end to end tests.
 I don't reject a pull request only because no tests are added.
 If it's enough good to add tests later, it's fine I guess.
 If not, I will request adding tests.
-But generally it's often hard to add tests later.
+Anyway generally it's often hard to add tests later.
 So we had better write tests as ealy as possible.
 
 ---
@@ -580,14 +584,14 @@ So we had better write tests as ealy as possible.
 
 ^
 Next I introduce some sideeffects in Android dev.
-1.If you add new Dangerous permission to the AndroidManifest,
+1.If you add a new Dangerous permission to the AndroidManifest,
 auto update will be disabled.
 So check if it's really necessary permission.
-2.And second one is an actual failure which I made.
+2.And second is an actual failure which I made.
 When I changed package name of Application class as a part of refactoring,
 do you know what happened?
 Users couldn't launch app from shortcut on their home screen,
-because the entity of shortcut is like a bookmark which refers to the intent of former package name of application.
+because the entity of shortcut is a kind of bookmark for the intent of former package name of the application class.
 
 [.build-lists: true]
 
@@ -610,12 +614,13 @@ Next we look back on the change from the goal.
 # Look back
 
 - Check if your opinion or recognition is right.
-- Imagine what you would  do if you were the reviewee.
+- Imagine what you would do if you were the reviewee.
 
 ^
 In the end of code reading, you may have different impression from the begining.
 Let's organize your thoughts to give your feedback.
-Don't forget to prioritize each issue.
+And imagine what you would do if you were the reviewee.
+If there is any issue, don't forget to prioritize each issue.
 It makes easier to talk about issues.
 
 ---
@@ -649,7 +654,7 @@ This topic is abstract.
 Before discussing about code, we should share common values in our team.
 Regarding coding rule or architecture, What is valueable thing in your team?
 1.In our team, elegance of architecture doesn't matter.
-Easy and simple way is the best way.
+Easy and simple way is the best.
 Because releases of Android platform or libraries which we use are very frequent.
 We need to update them as early as possible.
 So we focus on how is it easy to change, fix or add new features.
