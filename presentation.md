@@ -1,3 +1,4 @@
+
 # Code Review as a Collaborative Journey
 
 [.footer: Hiroshi Kurokawa, Takafumi Nanao, mixi, Inc., DroidKaigi 2019]
@@ -211,22 +212,77 @@ Now I will switch to Nanao-san.
 
 ---
 
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+1. Go through the strategy and what was made
+1. Verify if the change really takes you to the goal
+1. Look into every changes one by one
+1. Look back on the change from the goal
+1. Have a conversation with the reviewee
+
+
+[.footer: Photo by [Chelsea London Phillips](https://unsplash.com/@clondon_sink?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on [Unsplash](https://unsplash.com/photos/eiby0KY_ZNI)]
+
+^
+So I'm gonna dig a little deeper into each process from 1 to 6.
+
+---
+
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+
+[.footer: Photo by [Chelsea London Phillips](https://unsplash.com/@clondon_sink?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on [Unsplash](https://unsplash.com/photos/eiby0KY_ZNI)]
+
+^
+First process is understanding the background and the goal.
+To understand
+
+---
+
+![right](img/read-desc.png)
+
 # Understanding the background
 
 - Read the description
 - Are enough details written to review it or is it using pull request template?
-- Understand the background of the problem and check how it is solved
 
 ^
-1.So I'm gonna dig a little deeper into each steps.
-2.First of all let's check if the content was written using the template.
-If reviewee doesn't use template or there is something you don't understand, don't hesitate to ask reviewee it.
-3.Someone may feel it's too bother to write details using the template,
+1. Then let's check if the content was written using the template.
+2. If reviewee doesn't use template or there is something you don't understand, don't hesitate to ask reviewee it.
+3. Someone may feel it's too bother to write details using the template,
 but it's very helpful for the reviewer because the reviewer can feel free to review it with detail informations.
 On another note,  we recently check pull requests left not reviewed in the stand-up meeting every morning,
 also that's good to reduce pull requests not reviwed.
 
 [.build-lists: true]
+
+---
+
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+1. Go through the strategy and what was made
+
+[.footer: Photo by [Chelsea London Phillips](https://unsplash.com/@clondon_sink?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on [Unsplash](https://unsplash.com/photos/eiby0KY_ZNI)]
+
+^
+Next proccess.Check the strategy and what was made.
+
+---
+
+![right](img/signs.jpg)
+
+# strategy
+
+- organize information
+- review the strategy
+
+[.footer: Photo by [Jamie Street](https://unsplash.com/photos/dQLgop4tnsc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
+^
+After you read the description
 
 ---
 
