@@ -65,6 +65,7 @@ Until then, you would have gained a deeper understanding on the problem you are 
 This is the purpose of code review.  Collaborating with your coworker to make a good product.
 
 [.build-lists: true]
+
 ---
 # What information is required for Code Review?
 - Goal
@@ -322,11 +323,12 @@ Anyway, imagine what you don't want users to do. Just do it.
 [.build-lists: true]
 
 ---
+
 # Performance
 
 - Is working fast? 1s is slow.
 - Is it taking care of battery?
-  - Can you scroll RecyclerView smoothly?
+- Can you scroll RecyclerView smoothly?
 
 ^
 1.For user working fast is one of the most important things.
@@ -422,8 +424,7 @@ Then you may find better methods or classes.
 # leaks
 
 - Use it watching the profiler of AS
-- Does it have a strong reference to Acitivity?
-- Does it have a strong reference to Acitivity?
+- Does it have a strong reference to Activity?
 
 ^
 Also next topic is big one.
@@ -455,7 +456,6 @@ we had better write tests as ealy as possible.
 If you add new Dangerous permission to the AndroidManifest,
 auto update will be disabled.
 So check if it's really necessary permission.
-
 And another one is an actual failure which I made.
 When I changed package name of Application class as a part of refactoring,
 do you know what happened?
@@ -482,7 +482,6 @@ To avoid submit misunderstanding comment,
 
 ^
 If you think some changes is necessary, feedback your suggestion as detail as possible.
-
 And if you feel good to see the code, don't hesitate to feedback your feeling.
 That helps you to be positive to communicate each other.
 
