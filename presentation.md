@@ -1,7 +1,7 @@
 
 # Code Review as a Collaborative Journey
 
-[.footer: Hiroshi Kurokawa, Takafumi Nanao, mixi, Inc., DroidKaigi 2019]
+### Hiroshi Kurokawa, Takafumi Nanao, mixi, Inc., DroidKaigi 2019
 
 ^
 Hi, good morning everyone.
