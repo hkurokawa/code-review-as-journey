@@ -222,22 +222,21 @@ Now I will switch to Nanao-san.
 1. Have a conversation with the reviewee
 
 
-[.footer: Photo by [Chelsea London Phillips](https://unsplash.com/@clondon_sink?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on [Unsplash](https://unsplash.com/photos/eiby0KY_ZNI)]
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
 ^
-So I'm gonna dig a little deeper into each process from 1 to 6.
+So I'm gonna dig a little deeper into each process from 1
 
 ---
 
 ![](img/map.jpg)
 
-1. Understand the Background and the Goal
+1. **Understand the Background and the Goal**
 
-[.footer: Photo by [Chelsea London Phillips](https://unsplash.com/@clondon_sink?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on [Unsplash](https://unsplash.com/photos/eiby0KY_ZNI)]
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
 ^
 First process is understanding the background and the goal.
-To understand
 
 ---
 
@@ -249,9 +248,9 @@ To understand
 - Are enough details written to review it or is it using pull request template?
 
 ^
-1. Then let's check if the content was written using the template.
+1. First of all, let's check if the content was written using the template.
 2. If reviewee doesn't use template or there is something you don't understand, don't hesitate to ask reviewee it.
-3. Someone may feel it's too bother to write details using the template,
+Someone may feel it's too bother to write details using the template,
 but it's very helpful for the reviewer because the reviewer can feel free to review it with detail informations.
 On another note,  we recently check pull requests left not reviewed in the stand-up meeting every morning,
 also that's good to reduce pull requests not reviwed.
@@ -263,9 +262,9 @@ also that's good to reduce pull requests not reviwed.
 ![](img/map.jpg)
 
 1. Understand the Background and the Goal
-1. Go through the strategy and what was made
+1. **Go through the strategy and what was made**
 
-[.footer: Photo by [Chelsea London Phillips](https://unsplash.com/@clondon_sink?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge) on [Unsplash](https://unsplash.com/photos/eiby0KY_ZNI)]
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
 
 ^
 Next proccess.Check the strategy and what was made.
@@ -282,7 +281,24 @@ Next proccess.Check the strategy and what was made.
 [.footer: Photo by [Jamie Street](https://unsplash.com/photos/dQLgop4tnsc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
-After you read the description
+After you read the description and unserstand the goal,
+please think about the solution which the reviewee choosed.
+If you feel it's something weird, it's good to ask the reviewee why she or he choosed the strategy.
+You may find a hidden background.
+
+---
+
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+1. Go through the strategy and what was made
+1. **Verify if the change really takes you to the goal**
+
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+^
+If you agree with the strategy or approach,
+let's run it actually following verification steps in the description.
 
 ---
 
@@ -305,10 +321,15 @@ The worktree command enables check out the branch on another directory.
 Using a different directory helps make the build stable.
 
 ---
+
+![left](img/build.jpg)
+
 # Build
 
 - Warnings in build log or logcat
 - Try proguard build or release build when relevant file was changed
+
+[.footer: Photo by [Randy Fath](https://unsplash.com/photos/ymf4_9Y9S_A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
 After adding worktree, let's build the app.
@@ -322,12 +343,30 @@ If there are changes about proguard rules, try proguard build too.
 
 ---
 
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+1. Go through the strategy and what was made
+1. Verify if the change really takes you to the goal
+1. **Look into every changes one by one**
+
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+^
+
+---
+
+![right](img/phones.jpg)
+
 # UI
 
 - Is it along the guidelines of Material Design or your team's?
   - Is it not like iOS UI?
 - Is it using animation properly?
   - Change animation scale
+
+[.footer: Photo by [rawpixel](https://unsplash.com/photos/CBFVbE7OKoU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
 
 ^
 1.If there are changes about UI, check the UI with caution.
@@ -340,12 +379,17 @@ So we need to check if it's done the Android way.
 
 ---
 
+![left](img/cat.jpg)
+
 # UI behind UI
 
 - Is it handling errors?
 - Does it work even with no data?
   - add debug code directly
   - Airplane mode
+
+[.footer: Photo by [Mikhail Vasilyev](https://unsplash.com/photos/NodtnCsLdTE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
 
 ^
 Next topic is more troublesome.
@@ -358,18 +402,23 @@ So even if the data is displaied normally, we should check if those handling wor
 
 ---
 
+![right](img/doors.jpg)
+
 # Lifecycle
 
-- Does it work after returning from the home screen?
+- Does it work after returning from another screen?
 - Does it work after screen rotation?
 - Does it work after the process was killed?
 - Does it manage the Disposable or Closable at the right timing
 - Can it handle buttons being tapped very fast?
 
+
+[.footer: Photo by [Robert Anasch](https://unsplash.com/photos/ZFYg5jTvB4A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
 ^
 This is the biggest and unavoidable topics.
 We need to check a lot of things.
-1.check onPuause,
+1.check the state with onPuause and onResume,
 2.onStop and onStart,
 3.onDestroy and onCreate
 4.Pay attention to subscription or database objects
@@ -384,13 +433,14 @@ Anyway, imagine what you don't want users to do. Just do it.
 
 - Is working fast? 1s is slow.
 - Is it taking care of battery?
+- Doesn't any crash happen?
 - Can you scroll RecyclerView smoothly?
 
 ^
-1.For user working fast is one of the most important things.
+1,2,3. Working fast, savign battery and no crashes are the most important things for users.
 Take care of dealing with complex data.
-2.Battery too.
-We need to a If you feel slow, you should measure the time to interactive.
+4. And sometimes
+If you feel slow, you should measure the time to interactive.
 
 [.build-lists: true]
 
@@ -523,6 +573,21 @@ because the entity of shortcut is like a bookmark which refers to the intent of 
 [.build-lists: true]
 
 ---
+
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+1. Go through the strategy and what was made
+1. Verify if the change really takes you to the goal
+1. Look into every changes one by one
+1. **Look back on the change from the goal**
+
+
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+^
+
+---
 # Look back
 
 - Check if your opinion or recognition is right.
@@ -533,6 +598,22 @@ In the end of code reading, you may have different impression from the begining.
 To avoid submit misunderstanding comment,
 
 ---
+
+![](img/map.jpg)
+
+1. Understand the Background and the Goal
+1. Go through the strategy and what was made
+1. Verify if the change really takes you to the goal
+1. Look into every changes one by one
+1. **Look back on the change from the goal**
+
+
+[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+
+^
+
+---
+
 # Give your feedback
 
 - Feedback details to improve the code
