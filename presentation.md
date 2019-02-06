@@ -237,8 +237,6 @@ So I'm gonna dig a little deeper into each process from 1
 
 1. **Understand the Background and the Goal**
 
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
-
 ^
 First process is understanding the background and the goal.
 
@@ -268,8 +266,6 @@ also that's good to reduce pull requests not reviwed.
 1. Understand the Background and the Goal
 1. **Go through the strategy and what was made**
 
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
-
 ^
 Next proccess.Check the strategy and what was made.
 
@@ -277,7 +273,7 @@ Next proccess.Check the strategy and what was made.
 
 ![right](img/signs.jpg)
 
-# strategy
+# Strategy
 
 - organize information
 - review the strategy
@@ -285,9 +281,9 @@ Next proccess.Check the strategy and what was made.
 [.footer: Photo by [Jamie Street](https://unsplash.com/photos/dQLgop4tnsc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
-After you read the description and unserstand the goal,
-please think about the solution which the reviewee choosed.
-If you feel it's something weird, it's good to ask the reviewee why she or he choosed the strategy.
+After you read the description and understand the goal,
+please think about if the solution which the reviewee choosed is correct.
+If you feel it's weird, it's good to ask the reviewee why she or he choosed the strategy.
 You may find a hidden background.
 
 ---
@@ -298,10 +294,8 @@ You may find a hidden background.
 1. Go through the strategy and what was made
 1. **Verify if the change really takes you to the goal**
 
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
-
 ^
-If you agree with the strategy or approach,
+If you agree with the strategy or approach to the goal,
 let's run it actually following verification steps in the description.
 
 ---
@@ -317,9 +311,8 @@ android-studio.sh ~/code-review/branch_name
 ```
 
 ^
-After you understand the problem and the background, let's do operational check.
-To avoid wasting our time, we usually do operational check before code review.
-Sometimes gradle builds fail after checking out a branch which has changes about databinding, build.gradle and so forth.
+To avoid wasting time, we usually do operational check before code review.
+Sometimes gradle builds fail after checking out a branch which has changes about databinding, build.gradle.
 So we use the git worktree command.
 The worktree command enables check out the branch on another directory.
 Using a different directory helps make the build stable.
@@ -341,7 +334,7 @@ After adding worktree, let's build the app.
 Changes related to build setting makes sometimes big issue.
 Keep in mind to find troublesome problems as early as possible.
 2. Proguard too.
-If there are changes about proguard rules, try proguard build too.
+If there are changes about proguard rules or build variants, try build with corresponding build variants too.
 
 [.build-lists: true]
 
@@ -354,9 +347,9 @@ If there are changes about proguard rules, try proguard build too.
 1. Verify if the change really takes you to the goal
 1. **Look into every changes one by one**
 
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
-
 ^
+Next process, let's look into every changes one by one.
+Check how the app works.
 
 ---
 
@@ -368,6 +361,7 @@ If there are changes about proguard rules, try proguard build too.
   - Is it not like iOS UI?
 - Is it using animation properly?
   - Change animation scale
+- Does scrolling views work smoothly?
 
 [.footer: Photo by [rawpixel](https://unsplash.com/photos/CBFVbE7OKoU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
@@ -377,7 +371,9 @@ If there are changes about proguard rules, try proguard build too.
 1-2.Unfortunately everyone is not always familiar with Material Design or Android friendly UI.
 So we need to check if it's done the Android way.
 2.If you want to watch the animation carefully,
-2-2.the "Change animation scale" is helpful.
+2-2.the "Change animation scale" in developer options is helpful.
+3. If the change is about recycler view or list of images,
+check if those are reuse objects, or using cache properly.
 
 [.build-lists: true]
 
@@ -399,8 +395,11 @@ So we need to check if it's done the Android way.
 Next topic is more troublesome.
 1,2.Only showing data is not everything.
 We should handle various errors or empty state.
-2-2.To check the error handling, we may need to add some changes or use some settings of emulator to debug like Airplane mode
-So even if the data is displaied normally, we should check if those handling works.
+Check how it works, when the response from API was unexpected.
+2-2.To check handling errors,
+we may need to add some changes
+or use some settings of emulator to debug like Airplane mode.
+Even if the data is displaied normally, we should check if those handling works.
 
 [.build-lists: true]
 
@@ -433,29 +432,35 @@ Anyway, imagine what you don't want users to do. Just do it.
 
 ---
 
+![left](img/run.jpg)
 # Performance
 
 - Is working fast? 1s is slow.
-- Is it taking care of battery?
+- Does it save battery?
 - Doesn't any crash happen?
-- Can you scroll RecyclerView smoothly?
+
+[.footer: Photo by [Jonathan Chng](https://unsplash.com/@jon_chng) on [Unsplash](https://unsplash.com/)]
 
 ^
-1,2,3. Working fast, savign battery and no crashes are the most important things for users.
-Take care of dealing with complex data.
-4. And sometimes
-If you feel slow, you should measure the time to interactive.
+1,2,3. Working fast, saving battery and no crashes are very important things for users.
+Take care of dealing with complex data or background proccess.
+If you feel it's slow, you should measure the time to interactive.
 
 [.build-lists: true]
 
 ---
+![right](img/reading.jpg)
 # Read code
 
 - use Android Studio
 - If you have question, don't hesitate to check actual operation.
 - Is there any newly unnecessary code by that change.
 
+[.footer: Photo by [Maximilian Weisbecker](https://unsplash.com/photos/1td5Iq5IvNc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
+
 ^
+Finally, let's read the code!
 1.First, it's obvious thing. Use Android Studio, so that we can read relavant code too.
 2.Second, is obvious as first one.
 3.Last one is a little difficult to practice.
@@ -464,40 +469,28 @@ codes which became unnecessary with changes are not easy to find.
 [.build-lists: true]
 
 ---
-# Values
+![left](img/layout.jpg)
 
-We should share common values in our team.
-
-- Easy to read and change
-- Proper package name
-
-^
-Next topic is abstract.
-Regarding coding rule or architecture, What is valueable thing in your team?
-1.In our team, elegance of architecture doesn't matter.
-Easy and simple way is the best way.
-Because releases of Android platform or libraries which we use are very frequent.
-We need to update them as early as possible.
-So we focus on how is it easy to change, fix or add new features.
-2.To develop faster, also package names should be proper.
-This is off topic, but many Japanese programmers are not good at English,
-not only package names, naming is actually one of the most difficult process in programming in Japan.
-
-[.build-lists: true]
-
----
 # Layout
 
 - unnecessary stuffs
 - unnecessary nest
+- deprecated components
+
+[.footer: Photo by [Jose Alejandro Cuffia](https://unsplash.com/photos/_4815u_ACqQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
 Reviewing layout xml is painful.
-But we had better watch layout carefully, because sometimes unnecessary stuff is left after changing.
+But we had better watch layout carefully,
+1&2. because sometimes unnecessary stuff is left after changing.
 If you have any concern, change code and check how it works.
+3. If you find deprecated layout components like PercentLayout,
+think about replace them, or  create an issue for that.
 
 ---
-# code format
+![left](img/types.jpg)
+
+# Code format
 
 - share your coding rules
   - formatting
@@ -509,18 +502,27 @@ If you have any concern, change code and check how it works.
 !.idea/inspectionProfiles
 ```
 
+[.footer: Photo by [Fabio Santaniello Bruun](https://unsplash.com/photos/Y6tGu-OH8lA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
+Photo by Fabio Santaniello Bruun on Unsplash
+
 ^
 Discussing code format makes us exhausted.
-Settings about coding style or code inspection can be shared in repository.
+We had better share settings about coding style or code inspection in repository.
 Save your time with automation.
-Adding those settings to `gitignore` is helpful.
+Adding those settings to `gitignore` as below is helpful.
 
 ---
+![right](img/library.jpg)
 # 3rd party libraries
 
 - Is it trustworthy?
 - Is it maintained well?
 - Are there better alternatives?
+
+[.footer: Photo by [Glen Noble](https://unsplash.com/photos/o4-YyGi5JBc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
+Photo by Glen Noble on Unsplash
 
 ^
 1. When new library is added, check if it's trustworthy,
@@ -533,10 +535,13 @@ Then you may find better methods or classes.
 [.build-lists: true]
 
 ---
-# leaks
+![left](img/leaking.jpg)
+# Leaks
 
 - Use it watching the profiler of AS
 - Does it have a strong reference to Activity?
+
+[.footer: Photo by [Luis Tosta](https://unsplash.com/photos/SVeCm5KF_ho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
 Also next topic is big one.
@@ -548,21 +553,26 @@ memory usage may increase.
 that's the leak
 
 ---
-
+![right](img/tests.jpg)
 # Tests
 
 - Are proper tests added?
 - Are tests enough for additional conditions or boundary values?
 
+[.footer: Photo by [Nicolas Thomas](https://unsplash.com/photos/3GZi6OpSDcY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
 ^
-since it's often hard to add tests later,
+Since it's often hard to add tests later,
 we had better write tests as ealy as possible.
 
 ---
+![left](img/medicine.jpg)
 # Side effects
 
 - Adding Permission
 - Moving Application class
+
+[.footer: Photo by [rawpixel](https://unsplash.com/photos/K1PGQK2coPM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
 ^
 1.If you add new Dangerous permission to the AndroidManifest,
@@ -586,12 +596,10 @@ because the entity of shortcut is like a bookmark which refers to the intent of 
 1. Look into every changes one by one
 1. **Look back on the change from the goal**
 
-
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
-
 ^
 
 ---
+![left](img/sitting-on-cliff.jpg)
 # Look back
 
 - Check if your opinion or recognition is right.
@@ -599,7 +607,9 @@ because the entity of shortcut is like a bookmark which refers to the intent of 
 
 ^
 In the end of code reading, you may have different impression from the begining.
-To avoid submit misunderstanding comment,
+Let's organize your thoughts to give your feedback.
+Don't forget to priolitize each issue.
+It makes easier to talk about issues.
 
 ---
 
@@ -609,25 +619,53 @@ To avoid submit misunderstanding comment,
 1. Go through the strategy and what was made
 1. Verify if the change really takes you to the goal
 1. Look into every changes one by one
-1. **Look back on the change from the goal**
-
-
-[.footer: Photo by [Annie Spratt](https://unsplash.com/photos/qyAka7W5uMY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/journey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+1. Look back on the change from the goal
+1. **Have a conversation with the reviewee**
 
 ^
 
 ---
+![left](img/flower.jpg)
+# Values
 
+We should share common values in our team.
+
+- Easy to read and change
+- Proper package name
+
+[.footer: Photo by [Lina Trochez](https://unsplash.com/photos/ktPKyUs3Qjs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
+
+^
+This topic is abstract.
+Before discussing about code, we should share common values in our team.
+Regarding coding rule or architecture, What is valueable thing in your team?
+1.In our team, elegance of architecture doesn't matter.
+Easy and simple way is the best way.
+Because releases of Android platform or libraries which we use are very frequent.
+We need to update them as early as possible.
+So we focus on how is it easy to change, fix or add new features.
+2.To develop faster, also package names should be proper.
+This is off topic, but many Japanese programmers are not good at English,
+not only package names, naming is actually one of the most difficult process in programming in Japan.
+
+[.build-lists: true]
+
+---
+
+![right](img/journey-map.jpg)
 # Give your feedback
 
 - Feedback details to improve the code
   - Use code suggestion
-  - Conditions and steps to repro bug
-- Praises are welcome
+  - Tell conditions and steps to repro bug
+- Compliments are welcome
 
 ^
+This is the final step.
 If you think some changes is necessary, feedback your suggestion as detail as possible.
-And if you feel good to see the code, don't hesitate to feedback your feeling.
+Don't forget to specify whether the pull request can be merged.
+Regarding if it's can be done, reviewers should avoid ambigous comments.
+And if you feel good to see the code, don't hesitate to give compliments.
 That helps you to be positive to communicate each other.
 
 ---
@@ -635,6 +673,6 @@ That helps you to be positive to communicate each other.
 # [fit] FIN
 
 ^
-That's all.
+Ok, That's all.
 We're happy if you get some hints from our talk.
-Thank you all.
+Thank you for listening.
