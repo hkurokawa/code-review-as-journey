@@ -504,8 +504,6 @@ think about replace them, or  create an issue for that.
 
 [.footer: Photo by [Fabio Santaniello Bruun](https://unsplash.com/photos/Y6tGu-OH8lA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
 
-Photo by Fabio Santaniello Bruun on Unsplash
-
 ^
 Discussing code format makes us exhausted.
 We had better share settings about coding style or code inspection in repository.
@@ -521,8 +519,6 @@ Adding those settings to `gitignore` as below is helpful.
 - Are there better alternatives?
 
 [.footer: Photo by [Glen Noble](https://unsplash.com/photos/o4-YyGi5JBc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)]
-
-Photo by Glen Noble on Unsplash
 
 ^
 1. When new library is added, check if it's trustworthy,
