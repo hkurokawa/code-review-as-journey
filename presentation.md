@@ -678,12 +678,11 @@ not only package names, naming is actually one of the most difficult process in 
 
 ^
 This is the final step.
-If you think some changes is necessary, feedback your suggestion as detail as possible.
+If you think some changes are necessary, feedback your suggestion as detail as possible.
 Don't forget to specify whether the pull request can be merged.
-Regarding if it's can be done, reviewers should avoid ambigous comments.
 And even if you feel the code is good, don't hesitate to give compliments.
 That helps you to be positive to communicate each other.
-Creating good culture is more important than anything else.
+Building good team culture is more important than anything else.
 
 ---
 
@@ -692,7 +691,7 @@ Creating good culture is more important than anything else.
 ^
 Ok, That's all.
 We're happy if you get some hints from our talk.
-We will be in exhibition room for offiece hour,
+We will be in exhibition room for office hour,
 please visit us.
 We'd love to know how you do code review.
 Why don't we exchange knowledge about code review.
