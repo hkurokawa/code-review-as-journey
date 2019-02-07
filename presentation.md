@@ -487,6 +487,8 @@ If you have any concern, change code and check how it works.
 3. If you find deprecated components like PercentLayout,
 think about replace them, or create an issue for that.
 
+[.build-lists: true]
+
 ---
 ![left](img/types.jpg)
 
@@ -525,7 +527,7 @@ Adding those settings to `gitignore` as below is helpful.
 2. maintained well
 3. and there are better alternatives.
 If you don't know the new library,
-read the document and source code in most.
+read the document and source code.
 Then you may find better methods or classes.
 
 [.build-lists: true]
@@ -589,7 +591,7 @@ auto update will be disabled.
 So check if it's really necessary permission.
 2.And second is an actual failure which I made.
 When I changed package name of Application class as a part of refactoring,
-do you know what happened?
+can you imagine what happened?
 Users couldn't launch app from shortcut on their home screen,
 because the entity of shortcut is a kind of bookmark for the intent of former package name of the application class.
 
@@ -651,13 +653,13 @@ We should share common values in our team.
 
 ^
 This topic is abstract.
-Before discussing about code, we should share common values in our team.
+Before discussing about code, we should share common values in team.
 Regarding coding rule or architecture, What is valueable thing in your team?
 1.In our team, elegance of architecture doesn't matter.
 Easy and simple way is the best.
 Because releases of Android platform or libraries which we use are very frequent.
 We need to update them as early as possible.
-So we focus on how is it easy to change, fix or add new features.
+So we focus on how it is easy to change, fix or add new features.
 2.To develop faster, also package names should be proper.
 This is off topic, but many Japanese programmers are not good at English,
 not only package names, naming is actually one of the most difficult process in programming in Japan.
@@ -679,8 +681,9 @@ This is the final step.
 If you think some changes is necessary, feedback your suggestion as detail as possible.
 Don't forget to specify whether the pull request can be merged.
 Regarding if it's can be done, reviewers should avoid ambigous comments.
-And if you feel good to see the code, don't hesitate to give compliments.
+And even if you feel the code is good, don't hesitate to give compliments.
 That helps you to be positive to communicate each other.
+Creating good culture is more important than anything else.
 
 ---
 
@@ -689,4 +692,8 @@ That helps you to be positive to communicate each other.
 ^
 Ok, That's all.
 We're happy if you get some hints from our talk.
-Thank you for listening.
+We will be in exhibition room for offiece hour,
+please visit us.
+We'd love to know how you do code review.
+Why don't we exchange knowledge about code review.
+Thank you very much for listening.
