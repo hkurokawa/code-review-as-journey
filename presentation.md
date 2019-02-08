@@ -15,8 +15,8 @@ But I noticed there are good reviews and not-good ones.
 Some reviewers give considerate good feedback to a peer and they could have a great dicussion to make the product better while others just point out some typos.
 I think there are some techniques on how to do a good code review.  In terms of Android app development, there are some tips and tricks to do efficient code review as well.
 Today we would like to share that.
-In the first part, I will explain the general strategy of the code review.  What is code reivew?  How should we do that?
-In the second part, Nanao-san will introduce tips and techniques on doing a good review of Android app code.
+In the first part, I will explain the general things about the code review.  What is code reivew?  How should we do that?
+In the second part, Nanao-san will introduce tips and techniques on doing an efficient code review of Android app code.
 
 ---
 
@@ -101,8 +101,10 @@ I mean, how you can be sure that the change solves the problem and does not caus
 
 ^
 Just for your reference, here is a template I am using for Pull Request.
-I am always asking people to fill out this template when submitting a Pull Request.
-Then you can easily get the summary of the changes required for you to review.
+On the top, the background section says it is for fixing a bug.
+Below that, the strategy section describes this Pull Request is making some method calls asynchronous to fix the bug.
+In the changes section, it lists up which method the Pull Request actually changes.
+Finally, there are verification steps to verify that change works as expected.
 
 ---
 ![](img/book.jpg)
@@ -138,12 +140,11 @@ If you have any questions about them, ask the reviewee.  The sooner, the better.
 
 ^
 OK.  Now I am ready to go on a trip!  Let's start!  No, no.  A well experienced traveller examines the route before starting his or her journey.
-Of course, you do not need to check the details.  But it is valuable to have a rough idea on how the route is.  For example, does the route avoid a mountain in clockwise or counter-clockwise?
-Or does the route follow the shortest but hard path or longer but easy path?
+Of course, you do not need to check the details.  But it is valuable to have a rough idea on how the route is.  For example, does the route follow the shortest but hard path or longer but easy path?
 If the Pull Request you are reviewing describes some concerns, check them at this time.  You might be able to advise something on them here.
 For example, I once reviewed a Pull Request and noticed a standard widget can be used with a few modification instead of building a custom widget from scratch.
-I gave that feedback to the reviewee and we agreed that it would be better solution.  Although he had to remove most part of his code, we did not need to waste time on the custom widgets to be removed at last.
-So read the strategy and the list of changes and give a feedback to the reviewee if necessary.
+I gave that feedback to the reviewee and we agreed upon that using a standard widget would be better solution.  Although he had to remove most part of his code, we did not need to waste time on the custom widgets to be removed at last.
+So read the description before looking into changes and give a feedback to the reviewee if necessary.
 
 ---
 ![](img/car-on-road.jpg)
