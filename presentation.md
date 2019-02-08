@@ -244,7 +244,7 @@ First process is understanding the background and the goal.
 
 ---
 
-![right](img/read-desc.png)
+![right fit](img/pr.png)
 
 # Understanding the background
 
